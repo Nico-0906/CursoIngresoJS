@@ -7,6 +7,6 @@ function SacarResto()
 	var primernumero = document.getElementById("numeroDividendo").value;
     var segundonumero = document.getElementById("numeroDivisor").value;
     parseInt(primernumero, segundonumero);
-    var resto = primernumero / segundonumero;
+    var resto = primernumero % segundonumero;
     alert(resto);
 }

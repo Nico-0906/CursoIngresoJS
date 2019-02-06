@@ -4,4 +4,3 @@ function mostrar()
 {	
 alert("Usted se llama "+ document.getElementById("elNombre").value + " y tiene" + document.getElementById("laEdad").value);
 }
-

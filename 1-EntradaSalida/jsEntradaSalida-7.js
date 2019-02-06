@@ -2,14 +2,14 @@
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+    
+
 function sumar()
 {	
-	var primero = document.getElementById("numeroUno").value; 
+    var primero = document.getElementById("numeroUno").value;
     var segundo = document.getElementById("numeroDos").value;
-    parseInt(primero);
-    parseInt(segundo);
-    var resultado = primero + segundo;
-   alert(resultado);
+    var resultado = parseInt(primero) + parseInt(segundo);
+    alert(resultado);
 }
 
 function restar()
@@ -19,7 +19,7 @@ function restar()
     parseInt(primero);
     parseInt(segundo);
     var resultado = primero - segundo;
-   alert(resultado);
+    alert(resultado);
 }
 
 function multiplicar()
@@ -29,7 +29,7 @@ function multiplicar()
     parseInt(primero);
     parseInt(segundo);
     var resultado = primero * segundo;
-   alert(resultado);
+    alert(resultado);
 }
 
 function dividir()
@@ -39,6 +39,6 @@ function dividir()
     parseInt(primero);
     parseInt(segundo);
     var resultado = primero / segundo;
-   alert(resultado);
+    alert(resultado);
 }
 
