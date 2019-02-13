@@ -8,7 +8,55 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
+var cant, marca, prec, descto, impu;
 function CalcularPrecio () 
 {
- 	
+     cant = parseInt(document.getElementById("Cantidad").value);
+     prec = cant * 35;
+     
+     
+       if(cant >= 6){
+            descto = (prec * 50) / 100;
+            document.getElementById("precioDescuento").value = (prec - descto);
+        }else{
+            if(cant == 5 && document.getElementById("Marca").value == "ArgentinaLuz"){
+                descto = (prec * 40) / 100;
+                document.getElementById("precioDescuento").value = (prec - descto);
+            }else{
+                if(cant == 5 && document.getElementById("Marca").value != "ArgentinaLuz"){
+                    descto = (prec * 30) / 100;
+                    document.getElementById("precioDescuento").value = (prec - descto);
+                }else{
+                    if(cant == 4 && (document.getElementById("Marca").value == "ArgentinaLuz" || document.getElementById("Marca").value == "FelipeLamparas")){
+                        descto = (prec * 25) / 100;
+                        document.getElementById("precioDescuento").value = (prec - descto);
+                    }else{
+                        if(cant == 4 && (document.getElementById("Marca").value != "ArgentinaLuz" || document.getElementById("Marca").value != "FelipeLamparas")){
+                            descto = (prec * 20) / 100;
+                            document.getElementById("precioDescuento").value = (prec - descto);
+                        }else{
+                            if(cant == 3 && document.getElementById("Marca").value == "ArgentinaLuz"){
+                                descto = (prec * 15) / 100;
+                                document.getElementById("precioDescuento").value = (prec - descto);
+                            }else{
+                                if(cant == 3 && document.getElementById("Marca").value == "FelipeLamparas"){
+                                    descto = (prec * 10) / 100;
+                                    document.getElementById("precioDescuento").value = (prec - descto);
+                                }else{
+                                    if(cant == 3 && document.getElementById("Marca").value != "FelipeLamparas" && document.getElementById("Marca").value != "ArgentinaLuz"){
+                                        descto = (prec * 5) / 100;
+                                        document.getElementById("precioDescuento").value = (prec - descto);
+                                    }
+                                        }
+                                    }
+                                }                  
+                           }
+                     }
+                }
+            }
+            if(document.getElementById("precioDescuento").value > 120){
+                impu = (document.getElementById("precioDescuento").value * 10) / 100;
+                document.getElementById("precioDescuento").value = "Usted pago " + document.getElementById("precioDescuento").value + impu + " siendo " + ((document.getElementById("precioDescuento").value * 10) / 100) + " el impuesto que pago.";
+            }
 }
+    
