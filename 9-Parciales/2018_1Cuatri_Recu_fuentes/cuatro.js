@@ -11,8 +11,7 @@ function mostrar()
 
 
     if(cantidad > 2 && precio > 2000){
-            precio = precio - (precio * 10) / 100;
-            precio = precio - (precio * 15) / 100;
+            precio = precio - (precio * 25) / 100;
       }else{
         if(cantidad > 2 && precio < 2000){
             precio = precio - (precio * 10) / 100;
@@ -31,3 +30,4 @@ function mostrar()
     }
 
 }
+// quedo pendiente arreglar los porcentajes. (el primero esta bien)
