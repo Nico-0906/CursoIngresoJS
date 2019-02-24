@@ -6,8 +6,8 @@ function mostrar()
  if(numeroUno == numeroDos){
      alert(numeroUno + numeroDos);
     }else{
-     parseInt(numeroUno);
-     parseInt(numeroDos);
+     numeroUno = parseInt(numeroUno);
+     numeroDos = parseInt(numeroDos);
         if(numeroUno > numeroDos){
          alert(numeroUno - numeroDos);
              }else{
