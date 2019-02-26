@@ -1,22 +1,38 @@
 function mostrar()
 {
+  var impuno;
+  var impdos;
+  var imptres;
+  var impcuatro;
+  var suma = 0;
+  suma = parseInt(suma);
+  suma = impuno + impdos + imptres + impcuatro;
+  var porccien = 0;
+  porccien = parseInt(porccien);
+  porccien = suma * 10/100;
+  var porccin = 0;
+  porccin = parseInt(porccin);
+  porccin = suma * 5/100;
+  var porcquin = 0;
+  porcquin = parseInt(porcquin);
+  porcquin = suma * 15/100;
 
-    var impuno = prompt("ingrese primer importe");
+    impuno = prompt("ingrese primer importe");
     impuno = parseInt(impuno);
     if(isNaN(impuno)){
       impuno = prompt("reingrese numero");
     }
-    var impdos = prompt("ingrese segundo importe");
+    impdos = prompt("ingrese segundo importe");
     impdos = parseInt(impdos);
     if(isNaN(impdos)){
       impdos = prompt("reingrese numero");
     }
-    var imptres = prompt("ingrese tercer importe");
+    imptres = prompt("ingrese tercer importe");
     imptres = parseInt(imptres);
     if(isNaN(imptres)){
       imptres = prompt("reingrese numero");
     }
-    var impcuatro = prompt("ingrese cuarto importe");
+    impcuatro = prompt("ingrese cuarto importe");
     impcuatro = parseInt(impcuatro);
     if(isNaN(impcuatro)){
       impcuatro = prompt("reingrese numero");
@@ -52,21 +68,10 @@ function mostrar()
     }
 */
 
-var suma = 0;
-suma = parseInt(suma);
-suma = impuno + impdos + imptres + impcuatro;
-var porccien;
-porccien = parseInt(porccien);
-porccien = suma * 10/100;
-var porccin;
-porccin = suma * 5/100;
-var porcquin;
-porcquin = suma * 15/100;
-
-      if(suma > 100){
+      if(suma >= 100){
         alert("la suma es mayor a 100 el resultado con 10% de dscto. es " + suma - porccien);
       }else{
-        if(suma >= 50 && suma < 100){
+        if(suma >= 50 && suma < 50){
           alert("la suma es mayor a 50 el resultado con 5% de dscto. es " + suma - porccin);
         }else{
           alert("la suma es menor a 50 el resultado con 15% de recargo es " + suma + porcquin);
