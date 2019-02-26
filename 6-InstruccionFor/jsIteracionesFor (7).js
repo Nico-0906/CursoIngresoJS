@@ -3,6 +3,9 @@ function mostrar()
     var numero;
     numero = prompt("ingrese un numero");
     numero = parseInt(numero);
+    while(isNaN(numero)){
+        numero = prompt("reingrese el numero");
+    }
     var contador=0;
     for(var divisores=1 ; divisores < numero; divisores++){
 

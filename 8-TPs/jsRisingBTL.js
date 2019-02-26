@@ -9,5 +9,27 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    var edad = 0;
+    edad = parseInt(edad);
+
+    do{
+
+        edad=prompt("ingrese edad");
+
+    }while(edad < 18 || edad > 90);
+
+    document.getElementById("Edad").value = edad;
+
+    var sexo;
+    sexo = prompt("ingrese su sexo (F o M): ");
+
+    while(sexo != "M" && sexo != "F"){
+        alert("Sexo no valido");
+        sexo = prompt("ingrese su sexo valido (F o M); ");
+    }
+
+    document.getElementById("Sexo").value = sexo;
+
+    // FALTA UNA BANDA COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR
+    
 }
