@@ -4,7 +4,6 @@ function mostrar()
   var peso;
   var temp;
 
-while(confirm("Desea ingresar otro producto?")){
 marca = prompt("ingrese la marca");
 
 peso = prompt("ingrese peso");
@@ -15,7 +14,7 @@ temp = prompt("ingrese temperatura");
 if(temp>30 || temp<-30){
   temp = prompt("Reingrese temperatura entre 30 y -30");
 }
-}
+
 
 
 
