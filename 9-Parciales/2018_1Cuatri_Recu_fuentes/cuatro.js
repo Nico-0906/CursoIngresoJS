@@ -6,16 +6,6 @@ function mostrar()
   var impcuatro;
   var suma = 0;
   suma = parseInt(suma);
-  suma = impuno + impdos + imptres + impcuatro;
-  var porccien = 0;
-  porccien = parseInt(porccien);
-  porccien = suma * 10/100;
-  var porccin = 0;
-  porccin = parseInt(porccin);
-  porccin = suma * 5/100;
-  var porcquin = 0;
-  porcquin = parseInt(porcquin);
-  porcquin = suma * 15/100;
 
     impuno = prompt("ingrese primer importe");
     impuno = parseInt(impuno);
@@ -38,16 +28,27 @@ function mostrar()
       impcuatro = prompt("reingrese numero");
     }
 
+    suma = impuno + impdos + imptres + impcuatro;
+  var porccien = 0;
+  porccien = parseInt(porccien);
+  porccien = suma * 10/100;
+  var porccin = 0;
+  porccin = parseInt(porccin);
+  porccin = suma * 5/100;
+  var porcquin = 0;
+  porcquin = parseInt(porcquin);
+  porcquin = suma * 15/100;
+
     if(impuno >= impdos && impuno >= imptres && impuno >= impcuatro){
-        alert("el primer importe es el mayor" + impuno);
+        alert("el primer importe es el mayor " + impuno);
     }else{
       if(impdos > imptres && impdos > impcuatro){
-        alert("el segundo importe es el mayor" + impuno);
+        alert("el segundo importe es el mayor " + impuno);
       }else{
         if(imptres > impcuatro){
-          alert("el tercer importe es el mayor" + imptres);
+          alert("el tercer importe es el mayor " + imptres);
         }else{
-          alert("el cuarto importe es el mayor" + impcuatro);
+          alert("el cuarto importe es el mayor " + impcuatro);
         }
       }
     }
@@ -67,14 +68,20 @@ function mostrar()
       mayor=num4;
     }
 */
+var porc;
+porc = suma - porccien;
+var porci;
+porci = suma - porccin;
+var porq;
+porq = suma + porcquin;
 
       if(suma >= 100){
-        alert("la suma es mayor a 100 el resultado con 10% de dscto. es " + suma - porccien);
+        alert("la suma es mayor a 100 el resultado con 10% de dscto. es " + porc);
       }else{
         if(suma >= 50 && suma < 50){
-          alert("la suma es mayor a 50 el resultado con 5% de dscto. es " + suma - porccin);
+          alert("la suma es mayor a 50 el resultado con 5% de dscto. es " + porci);
         }else{
-          alert("la suma es menor a 50 el resultado con 15% de recargo es " + suma + porcquin);
+          alert("la suma es menor a 50 el resultado con 15% de recargo es " + porq);
         }
       }
 

@@ -1,5 +1,6 @@
 function mostrar()
 {
+/*
   var precio;
   precio = prompt("ingrese el precio de la habitacion");
   var pago;
@@ -13,6 +14,7 @@ function mostrar()
     case 1:
     case 3:
       desctopago = precio*10/100;
+      alert("paga ")
       break;
     case 2:
       desctopago = precio*15/100;
@@ -24,7 +26,34 @@ function mostrar()
       desctopago = precio*5/100;
       break;
   }
-
+*/
+  /*
+      switch(tipo){
+        clase "mercadopago":
+        clase "visa":
+          desc = precio * 0.1;
+          break;
+        clase "paypal":
+          switch(paquete){
+            case "todo":
+              desc = precio* 0.25;
+              break;                 (ESTE ESTA INCOMPLETO NO LLEGUE A COPIAR, BORRO. REHACER ESTE EJERCICIO
+                                      -INVESTIGAR SOBRE COMANDO: "DEBUGGER" -- ESTA MAL HECHO MAL MAL MAL MAL)
+          }
+        case "efectivo":
+          switch(paquete){
+            clase "desayunos":
+              desc = precio * 0.3;
+              break;
+            case "todoincluido":
+              desc = precio * 0.35;
+              break;
+            default:
+              desc = precio * 0.2;
+          }
+      }
+  */
+/*
   switch(paquete){
     case 1:
       if(pago == 2){
@@ -44,5 +73,72 @@ function mostrar()
       }
       break;
   }
+*/
+
+/*
+var uno;
+uno = prompt("ingrese primer importe");
+uno = parseInt(uno);
+var dos;
+dos = prompt("ingrese segundo importe");
+dos = parseInt(dos);
+var tres;
+tres = prompt("ingrese tres importe");
+tres = parseInt(tres);
+var cuatro;
+cuatro = prompt("ingrese cuarto importe");
+cuatro = parseInt(cuatro);
+*/
+var contador = 0;
+var ingresado = 0;
+var diezporc;
+var cincporc,
+var quincporc;
+
+diezporc = ingresado*10/100;
+cincporc = ingresado*5/100;
+quincporc = ingresado*15/100;
+
+while(contador<4){
+  ingresado = ingresado + prompt("ingrese numero");
+  ingresado = parseInt(ingresado);
+  contador++;
+}//ESTA MAL REHACER CON EL EJEMPLO DEL PROFESOR QUE ESTA ABAJO.
+if(ingresado>=100){
+  alert(ingresado - diezporc);
+}else{
+  if(ingresado>=50 && ingresado<100){
+    alert(ingresado - cincporc);
+  }else{
+    alert(ingresado + quincporc);
+  }
+}
+/*
+  var cont = 0;
+  var mayor;
+  var orden;
+
+  while(cont<4){
+    cont++;
+    do{
+      num=prompt();
+      num=parseInt(num);
+    }while(esNaN(num));
+    if(cont == 1){
+      orden = cont;
+      mayor = num;
+    }else{
+      if(num>mayor){
+        orden = cont;
+        mayor=num;
+      }
+    }
+  }
+
+
+
+
+
+
 
 }
