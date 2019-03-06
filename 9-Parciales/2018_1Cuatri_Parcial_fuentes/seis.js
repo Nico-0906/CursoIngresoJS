@@ -2,7 +2,8 @@ function mostrar()
 {
 
 var hora; 
-hora = parseInt(document.getElementById("laHora").value);
+hora = document.getElementById("laHora").value;
+hora = parseInt(hora);
 
 switch(hora){
     case 6:
